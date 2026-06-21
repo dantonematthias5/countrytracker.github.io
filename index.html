@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Expedition Journal — Travel Tracker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A personal log of countries, regions, cities and places explored.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-mark">✦</span>
+      <div>
+        <h1>Expedition Journal</h1>
+        <p class="tagline">Countries, regions, cities and places — logged one stamp at a time.</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button id="exportBtn" class="btn btn-ghost" type="button">Export backup</button>
+      <label class="btn btn-ghost" for="importInput">Import backup</label>
+      <input type="file" id="importInput" accept="application/json" hidden>
+    </div>
+  </div>
+</header>
+
+<section class="stats-bar" id="statsBar"></section>
+
+<nav class="breadcrumb" id="breadcrumb"></nav>
+
+<main id="app" class="app"></main>
+
+<footer class="site-footer">
+  <p>Everything here is stored locally in this browser. Export a backup now and then so a cleared cache never costs you a stamp.</p>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close">×</button>
+  <img id="lightboxImg" src="" alt="Enlarged photo">
+  <button class="lightbox-delete" id="lightboxDelete" type="button">Delete this photo</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
